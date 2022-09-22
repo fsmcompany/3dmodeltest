@@ -1,0 +1,11 @@
+Model Information:
+* title:	Jonathan
+* source:	https://sketchfab.com/3d-models/jonathan-2965110c4c334cb0ba48f0f5d34b1fc2
+* author:	CODAME (https://sketchfab.com/codame)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Jonathan" (https://sketchfab.com/3d-models/jonathan-2965110c4c334cb0ba48f0f5d34b1fc2) by CODAME (https://sketchfab.com/codame) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

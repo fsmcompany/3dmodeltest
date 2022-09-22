@@ -5,6 +5,29 @@ import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 // ----- 주제: glb 파일 불러오기
 
 export default function example() {
+  const gltfLoader = new GLTFLoader();
+  // Scene
+  const scene = new THREE.Scene();
+  const firstClick = (e) => {
+    scene.remove.apply(scene, scene.children);
+
+    gltfLoader.load("/models/patrick/scene.gltf", (gltf) => {
+      // console.log(gltf.scene);
+      const ilbuniMesh = gltf.scene.children[0];
+      scene.add(ilbuniMesh);
+    });
+  };
+  const secondClick = (e) => {
+    scene.remove.apply(scene, scene.children);
+
+    gltfLoader.load("/models/jonathan/scene.gltf", (gltf) => {
+      const ilbuniMesh = gltf.scene.children[0];
+      scene.add(ilbuniMesh);
+    });
+  };
+  document.querySelector(".img_wrapper :nth-child(1)").onclick = firstClick;
+  document.querySelector(".img_wrapper :nth-child(2)").onclick = secondClick;
+
   // Renderer
   const canvas = document.querySelector("#three-canvas");
   const renderer = new THREE.WebGLRenderer({
@@ -13,9 +36,6 @@ export default function example() {
   });
   renderer.setSize(window.innerWidth, window.innerHeight);
   renderer.setPixelRatio(window.devicePixelRatio > 1 ? 2 : 1);
-
-  // Scene
-  const scene = new THREE.Scene();
 
   // Camera
   const camera = new THREE.PerspectiveCamera(
@@ -41,8 +61,8 @@ export default function example() {
   const controls = new OrbitControls(camera, renderer.domElement);
 
   // gltf loader
-  const gltfLoader = new GLTFLoader();
-  gltfLoader.load("/models/scene.gltf", (gltf) => {
+
+  gltfLoader.load("/models/jonathan/scene.gltf", (gltf) => {
     // console.log(gltf.scene);
     const ilbuniMesh = gltf.scene.children[0];
     scene.add(ilbuniMesh);
