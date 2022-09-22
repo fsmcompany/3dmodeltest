@@ -7,12 +7,17 @@ import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 export default function example() {
   const gltfLoader = new GLTFLoader();
   // Scene
-  const scene = new THREE.Scene();
+  let scene = new THREE.Scene();
   const firstClick = (e) => {
     scene.remove.apply(scene, scene.children);
+    //조명추가
+    const ambientLight = new THREE.AmbientLight(0xffffff, 1);
+    scene.add(ambientLight);
+    const dirLight = new THREE.DirectionalLight(0xefefff, 1.5);
+    dirLight.position.set(10, 10, 10);
+    scene.add(dirLight);
 
-    gltfLoader.load("/models/gd/scene.gltf", (gltf) => {
-      // console.log(gltf.scene);
+    gltfLoader.load("/models/jaigeas/scene.gltf", (gltf) => {
       const ilbuniMesh = gltf.scene.children[0];
       scene.add(ilbuniMesh);
     });
@@ -21,8 +26,8 @@ export default function example() {
     scene.remove.apply(scene, scene.children);
 
     gltfLoader.load("/models/patrick/scene.gltf", (gltf) => {
-      const aa = gltf.scene.children[0];
-      scene.add(aa);
+      const ilbuniMesh = gltf.scene.children[0];
+      scene.add(ilbuniMesh);
     });
   };
   const thirdClick = (e) => {
@@ -45,7 +50,7 @@ export default function example() {
   });
   renderer.setSize(window.innerWidth, window.innerHeight);
   renderer.setPixelRatio(window.devicePixelRatio > 1 ? 2 : 1);
-
+  renderer.gammaOutput = true;
   // Camera
   const camera = new THREE.PerspectiveCamera(
     75,
@@ -71,7 +76,7 @@ export default function example() {
 
   // gltf loader
 
-  gltfLoader.load("/models/gd/scene.gltf", (gltf) => {
+  gltfLoader.load("/models/jaigeas/scene.gltf", (gltf) => {
     const ilbuniMesh = gltf.scene.children[0];
     scene.add(ilbuniMesh);
   });
