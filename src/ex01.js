@@ -76,7 +76,7 @@ export default function example() {
 
   // gltf loader
 
-  gltfLoader.load("/models/jaigeas/scene.gltf", (gltf) => {
+  gltfLoader.load("/models/patrick/scene.gltf", (gltf) => {
     const ilbuniMesh = gltf.scene.children[0];
     scene.add(ilbuniMesh);
   });
