@@ -1,0 +1,11 @@
+Model Information:
+* title:	Gundam Build Divers - Ayame
+* source:	https://sketchfab.com/3d-models/gundam-build-divers-ayame-31dd3189862645c6ad71d246aa8798a6
+* author:	brogox (https://sketchfab.com/brogox)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Gundam Build Divers - Ayame" (https://sketchfab.com/3d-models/gundam-build-divers-ayame-31dd3189862645c6ad71d246aa8798a6) by brogox (https://sketchfab.com/brogox) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

@@ -11,13 +11,21 @@ export default function example() {
   const firstClick = (e) => {
     scene.remove.apply(scene, scene.children);
 
-    gltfLoader.load("/models/patrick/scene.gltf", (gltf) => {
+    gltfLoader.load("/models/gd/scene.gltf", (gltf) => {
       // console.log(gltf.scene);
       const ilbuniMesh = gltf.scene.children[0];
       scene.add(ilbuniMesh);
     });
   };
   const secondClick = (e) => {
+    scene.remove.apply(scene, scene.children);
+
+    gltfLoader.load("/models/patrick/scene.gltf", (gltf) => {
+      const aa = gltf.scene.children[0];
+      scene.add(aa);
+    });
+  };
+  const thirdClick = (e) => {
     scene.remove.apply(scene, scene.children);
 
     gltfLoader.load("/models/jonathan/scene.gltf", (gltf) => {
@@ -27,6 +35,7 @@ export default function example() {
   };
   document.querySelector(".img_wrapper :nth-child(1)").onclick = firstClick;
   document.querySelector(".img_wrapper :nth-child(2)").onclick = secondClick;
+  document.querySelector(".img_wrapper :nth-child(3)").onclick = thirdClick;
 
   // Renderer
   const canvas = document.querySelector("#three-canvas");
@@ -62,8 +71,7 @@ export default function example() {
 
   // gltf loader
 
-  gltfLoader.load("/models/jonathan/scene.gltf", (gltf) => {
-    // console.log(gltf.scene);
+  gltfLoader.load("/models/gd/scene.gltf", (gltf) => {
     const ilbuniMesh = gltf.scene.children[0];
     scene.add(ilbuniMesh);
   });

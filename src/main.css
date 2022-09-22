@@ -26,3 +26,22 @@ body {
   width: 150px;
   height: 100px;
 }
+@media (max-width: 800px) {
+  #overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 20vh;
+    background-color: white;
+  }
+  #overlay .img_wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  #overlay .img_wrapper img {
+    margin-left: 20px;
+  }
+}
